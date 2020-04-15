@@ -8,7 +8,7 @@ jobs:
     - name: prerelease or not
       id: pre_or_not
       run: |
-        if $REF == 'refs/heads/master'
+        if [ $REF == 'refs/heads/master' ]
         then
           echo "::set-output name=prerelease::true"
         else
